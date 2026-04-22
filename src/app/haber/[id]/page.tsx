@@ -96,7 +96,7 @@ export default async function HaberDetay({ params }: { params: { id: string } })
               <h2 className="font-outfit font-bold text-xl text-white">İlgili Haberler</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {related.map((r: any) => (
+              {related.map((r: { id: string; title: string; image_url: string; created_at: string }) => (
                 <Link key={r.id} href={`/haber/${r.id}`} className="group card-hover">
                   <div className="bg-pitch-800 border border-white/5 rounded-xl overflow-hidden hover:border-gold-500/30 transition-colors">
                     <div className="h-32 overflow-hidden">
