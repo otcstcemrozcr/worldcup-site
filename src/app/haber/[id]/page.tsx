@@ -48,7 +48,7 @@ export default async function HaberDetay({ params }: { params: { id: string } })
       <Navbar />
 
       {/* Hero image */}
-      <div className="relative h-[55vh] min-h-[400px] overflow-hidden">
+      <div className="relative h-[40vh] sm:h-[55vh] min-h-[280px] sm:min-h-[400px] overflow-hidden">
         <img
           src={post.image_url || 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&q=80'}
           alt={post.title}
@@ -58,7 +58,7 @@ export default async function HaberDetay({ params }: { params: { id: string } })
       </div>
 
       {/* Content */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 -mt-24 relative z-10 pb-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 -mt-16 sm:-mt-24 relative z-10 pb-20">
         <Link href="/" className="inline-flex items-center gap-2 text-slate-400 hover:text-white text-sm mb-6 transition-colors">
           ← Ana Sayfaya Dön
         </Link>
@@ -72,7 +72,7 @@ export default async function HaberDetay({ params }: { params: { id: string } })
               <span className="text-slate-500 text-sm">{formatDate(post.created_at)}</span>
             </div>
 
-            <h1 className="font-outfit font-black text-3xl sm:text-4xl text-white leading-tight mb-8">
+            <h1 className="font-outfit font-black text-2xl sm:text-4xl text-white leading-tight mb-6 sm:mb-8">
               {post.title}
             </h1>
 

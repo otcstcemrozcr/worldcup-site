@@ -52,7 +52,7 @@ export default async function HomePage() {
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       {hero ? (
-        <section className="relative h-[92vh] min-h-[600px] flex items-end overflow-hidden">
+        <section className="relative h-[85vh] sm:h-[92vh] min-h-[580px] flex items-end overflow-hidden">
           <div className="absolute inset-0">
             <img
               src={hero.image_url || 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&q=80'}
@@ -79,18 +79,18 @@ export default async function HomePage() {
                 <span className="text-slate-400 text-xs">{formatDate(hero.created_at)}</span>
               </div>
 
-              <h1 className="font-outfit font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
+              <h1 className="font-outfit font-black text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.1] mb-4 sm:mb-5">
                 {hero.title}
               </h1>
 
-              <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl line-clamp-3">
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl line-clamp-3">
                 {hero.content}
               </p>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 sm:gap-4">
                 <Link
                   href={`/haber/${hero.id}`}
-                  className="group inline-flex items-center gap-3 bg-gold-gradient text-pitch-950 font-bold px-7 py-3.5 rounded-full hover:shadow-gold-glow transition-all duration-300 hover:scale-105"
+                  className="group inline-flex items-center gap-2 sm:gap-3 bg-gold-gradient text-pitch-950 font-bold px-5 sm:px-7 py-3 sm:py-3.5 rounded-full hover:shadow-gold-glow transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 >
                   Haberi Oku
                   <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
